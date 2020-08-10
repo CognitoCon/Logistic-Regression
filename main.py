@@ -9,10 +9,10 @@ test = pd.read_csv(r"Data\test - test.csv")
 
 # Train model with training data
 model = logRegModel(train)
-model.trainModel(num_iters=1000)
+model.trainModel(alpha=0.1, num_iters=1000, lam=0.1)
 
 # Plot training data and boundary
-model.plot2dProjection()
+model.plot2dProjection(i=1, j=2)
 
 # Test model on test data
 testModel, stats = model.test(test)

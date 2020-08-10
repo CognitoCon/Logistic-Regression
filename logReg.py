@@ -127,7 +127,7 @@ class logRegModel:
             self.theta = np.reshape(self.theta, (-1, 1))
 
     # train model parameters using training data
-    def trainModel(self, alpha=0.1, num_iters=1000, lam=0.1):
+    def trainModel(self, alpha=0.1, num_iters=1000, lam=0):
         self.theta, self.J_history = gradientDescent(
             self.X, self.y, self.theta, alpha, num_iters, lam
         )
@@ -148,6 +148,7 @@ class logRegModel:
         y = predict(self.theta, X)
         return y
 
+    # try model on test data
     def test(self, input):
         testModel = logRegModel(input, self.theta)
         prediction = predict(self.theta, testModel.X)
