@@ -1,4 +1,4 @@
-# Logistic-Regression
+# Logistic-Regression-Classifier
 
   This is a class-based implementation of regularized logistic regression in Python using Numpy and pandas. In its implementation it takes a pandas dataframe where every column except for the last is assumed to be a feature and the final column is assumed to be a classification (1 or 0).
   
